@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+#outline {
+    width: 88.1%;
+    height: 76.5vh;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1.1%;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+#l {
+    width: 49.5%;
+    height: 100%;
+    background-color: lightgray;
+}
+#m {
+    width: 0.95%;
+    height: 100%;
+    background-color: rgb(197, 197, 197);
+}
+#r {
+    width: 49.5%;
+    height: 100%;
+    background-color: lightgray;
+}
+
+#main {
+    width: 85%;
+    height: 70vh;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4.4%;
+    overflow: hidden;
+    border-radius: 15px;
+}
+#main i {
+    font-size: 120px;
+    transition: font-size 0.2s ease;
+}
+#left {
+    height: 100%;
+    width: 49.5%;
+    background-color: rgb(255, 51, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#left i {
+    transform: rotate(90deg);
+}
+#left .fa-hand-scissors {
+    transform: rotate(180deg) rotateX(180deg);
+}
+#left-score {
+    position: absolute;
+    top: 0px;
+    right: 600px;
+}
+
+#right {
+    height: 100%;
+    width: 49.5%;
+    background-color: dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#right-score {
+    position: absolute;
+    top: 0px;
+    left: 600px;
+}
+#right i {
+    transform: rotate(-90deg) rotateY(180deg);
+}
+#right .fa-hand-scissors {
+    transform: rotate(-180deg) rotateY(180deg) rotateX(180deg);
+}
+
+#left-choose, #rigth-choose {
+    font-size: 100px;
+}
+
+#cross {
+    height: 100%;
+    width: 1%;
+    background-color: orange;
+}
+
+#selector {
+    height: 20vh;
+    width: 50%;
+    background-color: lightgray;
+    position: absolute;
+    bottom: 1vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+}
+#selector i {
+    height: 50px;
+    width: 50px;
+    color: black;
+    opacity: 1;
+    font-size: 50px;
+}
+#rock {
+    height: 100%;
+    width: 33.333%;
+}
+#paper {
+    height: 100%;
+    width: 33.333%;
+}
+#scissors {
+    height: 100%;
+    width: 33.333%;
+}
+#scissors .fa-hand-scissors {
+    transform: rotate(90deg) rotateX(180deg);
+}
+#rock, #paper, #scissors {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    pointer-events: none;
+    user-select: none;
+}
+
+#rock:hover {
+    animation: rock 0.2s ease-out forwards;
+}
+@keyframes rock {
+    0% {background-color: unset;}
+    100% {background-color: grey;}
+}
+#paper:hover {
+    animation: paper 0.2s ease-out forwards;
+}
+@keyframes paper {
+    0% {background-color: unset;}
+    100% {background-color: grey;}
+}
+#scissors:hover {
+    animation: scissors 0.2s ease-out forwards;
+}
+@keyframes scissors {
+    0% {background-color: unset;}
+    100% {background-color: grey;}
+}
+
+
